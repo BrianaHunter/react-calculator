@@ -45,29 +45,33 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="calculator">
-        <div className="display">
-          {result ? <span>({result})</span> : ""}
-          &nbsp;
-          {calc || "0"}
-        </div>
+    <div>
+      <div className="title">The Simple Calculator</div>
 
-        <div className="operators">
-          <button onClick={() => updateCalc("/")}>/</button>
-          <button onClick={() => updateCalc("*")}>*</button>
-          <button onClick={() => updateCalc("+")}>+</button>
-          <button onClick={() => updateCalc("-")}>-</button>
+      <div className="App">
+        <div className="calculator">
+          <div className="display">
+            {result ? <span>({result})</span> : ""}
+            &nbsp;
+            {calc || "0"}
+          </div>
 
-          <button onClick={deleteLast}>Del</button>
-        </div>
+          <div className="operators">
+            <button onClick={() => updateCalc("/")}>/</button>
+            <button onClick={() => updateCalc("*")}>*</button>
+            <button onClick={() => updateCalc("+")}>+</button>
+            <button onClick={() => updateCalc("-")}>-</button>
 
-        <div className="digits">
-          {createDigits()}
-          <button onClick={() => updateCalc("0")}>0</button>
-          <button onClick={() => updateCalc(".")}>.</button>
+            <button onClick={deleteLast}>Del</button>
+          </div>
 
-          <button onClick={calculate}>=</button>
+          <div className="digits">
+            {createDigits()}
+            <button onClick={() => updateCalc("0")}>0</button>
+            <button onClick={() => updateCalc(".")}>.</button>
+
+            <button onClick={calculate}>=</button>
+          </div>
         </div>
       </div>
     </div>
