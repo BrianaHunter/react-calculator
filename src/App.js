@@ -60,7 +60,6 @@ function App() {
           <button onClick={() => updateCalc("-")}>-</button>
 
           <button onClick={deleteLast}>Del</button>
-          {/* <button onClick={clear}>Clear</button> */}
         </div>
 
         <div className="digits">
